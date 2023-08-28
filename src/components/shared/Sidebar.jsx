@@ -1,8 +1,20 @@
-import React from 'react'
-import {RiHome6Line, RiPercentLine, RiPieChartLine, RiMailLine, RiNotification3Line, RiSettings4Line, RiLogoutCircleLine} from 'react-icons/ri'
-const Sidebar = () => {
+
+
+import {
+    RiHome6Line,
+    RiPercentLine,
+    RiPieChartLine,
+    RiMailLine,
+    RiNotification3Line,
+    RiSettings4Line,
+    RiLogoutCircleLine
+} from 'react-icons/ri'
+const Sidebar = ( props ) => {
+
+    const { showMenu } = props;
+
     return (
-        <div className='bg-[#1F1D2B] fixed left-0 top-0 w-28 h-full flex flex-col justify-between py-6 rounded-tr-xl rounded-br-xl'>
+        <div className={`bg-[#1F1D2B] fixed lg:left-0 top-0 w-28 h-full flex flex-col justify-between py-6 rounded-tr-xl rounded-br-xl z-50 transition-all ${ showMenu? '-left-0' : '-left-full' }`}>
             <div>
                 <ul className='pl-4'>
                     <h1 className='text-2xl text-gray-300 uppercase font-bold text-center my-5'>
